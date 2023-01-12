@@ -1,4 +1,4 @@
-const FormNewCustomer = ({ client }) => {
+const FormNewClient = ({ client }) => {
     return (
         <>
             <div className="mb-4">
@@ -10,7 +10,7 @@ const FormNewCustomer = ({ client }) => {
                     id="name"
                     type="text"
                     className="mt-2 block w-full p-3 bg-gray-50"
-                    placeholder="Customer's Name"
+                    placeholder="Client's Name"
                     name="name"
                 />
             </div>
@@ -23,7 +23,7 @@ const FormNewCustomer = ({ client }) => {
                     id="company"
                     type="text"
                     className="mt-2 block w-full p-3 bg-gray-50"
-                    placeholder="Customer's Company"
+                    placeholder="Client's Company"
                     name="company"
                 />
             </div>
@@ -37,7 +37,7 @@ const FormNewCustomer = ({ client }) => {
                     id="email"
                     type="email"
                     className="mt-2 block w-full p-3 bg-gray-50"
-                    placeholder="Customer's Email"
+                    placeholder="Client's Email"
                     name="email"
                 />
             </div>
@@ -51,7 +51,7 @@ const FormNewCustomer = ({ client }) => {
                     id="phone"
                     type="tel"
                     className="mt-2 block w-full p-3 bg-gray-50"
-                    placeholder="Customer's Phone"
+                    placeholder="Client's Phone"
                     name="phone"
                 />
             </div>
@@ -66,7 +66,7 @@ const FormNewCustomer = ({ client }) => {
                     id="notes"
                     type="text"
                     className="mt-2 block w-full p-3 bg-gray-50 h-40 align-self"
-                    placeholder="Customer's Notes"
+                    placeholder="Client's Notes"
                     name="notes"
                 />
             </div>
@@ -74,4 +74,4 @@ const FormNewCustomer = ({ client }) => {
     )
 }
 
-export default FormNewCustomer;
+export default FormNewClient;

@@ -4,10 +4,10 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import './index.css'
 import Layout from './components/Layout';
-import Index, { Loader as customerLoader } from './pages/Index';
-import NewCustomer, { action as newCustomerAction } from './pages/NewCustomer';
+import Index, { loader as clientLoader } from './pages/Index';
+import NewClient, { action as newClientAction } from './pages/NewClient';
 import ErrorPage from './components/ErrorPage';
-import EditClient from './pages/EditClient';
+import EditClient, { loader as editClientLoader } from './pages/EditClient';
 
 const router = createBrowserRouter([
   {
@@ -17,21 +17,22 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Index />,
-        loader: customerLoader,
-        errorElement: <ErrorPage/>,
+        loader: clientLoader,
+        errorElement: <ErrorPage />,
       },
       {
         path: '/about-us',
         element: <h1>About-us</h1>
-      }, 
-      {
-        path: '/new-customer',
-        element: <NewCustomer />,
-        action: newCustomerAction
       },
       {
-        path: '/customer/:clientId/edit',
-        element: <EditClient />
+        path: '/new-client',
+        element: <NewClient />,
+        action: newClientAction
+      },
+      {
+        path: '/clients/:clientId/edit',
+        element: <EditClient />,
+        loader: editClientLoader
       }
     ]
   },

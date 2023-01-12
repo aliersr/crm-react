@@ -1,5 +1,5 @@
 {
-  "customers": [
+  "clients": [
     {
       "id": 1,
       "name": "Mark",
@@ -42,6 +42,14 @@
       "phone": "8483734350",
       "notes": "Nuevo Cliente",
       "id": 6
+    },
+    {
+      "name": "Briseida soriano",
+      "company": "Data",
+      "email": "ilotwr@yahoo.com.mx",
+      "phone": "7543678284",
+      "notes": "New Client",
+      "id": 7
     }
   ]
 }

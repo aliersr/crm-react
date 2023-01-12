@@ -1,6 +1,6 @@
 import { useNavigate, Form, useActionData, redirect } from 'react-router-dom';
 
-import FormNewCustomer from '../components/FormNewCustomer';
+import FormNewClient from '../components/FormNewClient';
 import Error from '../components/Error';
 import { addNewClient } from '../data/clients';
 
@@ -31,14 +31,14 @@ export async function action({ request }) {
 }
 
 
-const NewCustomer = () => {
+const NewClient = () => {
   const errors = useActionData();
   const navigate = useNavigate();
 
   return (
     <>
-      <h1 className="font-black text-4xl text-blue-900">New Customer</h1>
-      <p className="mt-3">Fill in all the fields to register a new customer</p>
+      <h1 className="font-black text-4xl text-blue-900">New Client</h1>
+      <p className="mt-3">Fill in all the fields to register a new client</p>
 
       <div className='flex justify-end'>
         <button
@@ -59,13 +59,13 @@ const NewCustomer = () => {
           noValidate
         >
 
-          <FormNewCustomer
+          <FormNewClient
           />
 
           <input
             className='mt-5 w-full bg-blue-800 p-3 uppercase text-white text-lg'
             type="submit"
-            value="Customer register"
+            value="Client register"
           />
         </Form>
 
@@ -74,4 +74,4 @@ const NewCustomer = () => {
   )
 }
 
-export default NewCustomer;
+export default NewClient;
