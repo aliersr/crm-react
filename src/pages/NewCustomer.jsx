@@ -1,7 +1,9 @@
-import { useNavigate, Form, useActionData } from 'react-router-dom';
+import { useNavigate, Form, useActionData, redirect } from 'react-router-dom';
 
 import FormNewCustomer from '../components/FormNewCustomer';
 import Error from '../components/Error';
+import { addNewClient } from '../data/clients';
+
 
 
 export async function action({ request }) {
@@ -19,9 +21,15 @@ export async function action({ request }) {
   let regEx = new RegExp("^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$");
   if (!regEx.test(email)) errors.push('Invalid Email');
 
+  //Return data If there are any Error.
   if (Object.keys(errors).length) return errors;
 
+  await addNewClient(data);
+
+  return redirect('/');
+
 }
+
 
 const NewCustomer = () => {
   const errors = useActionData();
@@ -48,7 +56,7 @@ const NewCustomer = () => {
 
         <Form
           method='post'
-          noValidate 
+          noValidate
         >
 
           <FormNewCustomer

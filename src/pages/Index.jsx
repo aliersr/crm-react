@@ -1,18 +1,17 @@
 import { useLoaderData } from 'react-router-dom';
 
-import { getClients } from '../data/getClient';
+import { getClients } from '../data/clients';
 import Client from './Client';
 
 export const Loader = () => {
   const client = getClients();
-    return client; 
+  return client;
 }
 
 const Index = () => {
-  
+
   const customers = useLoaderData();
 
- 
   return (
     <>
       <h1 className="font-black text-4xl text-blue-900">Customers</h1>
@@ -32,13 +31,13 @@ const Index = () => {
               <Client
                 key={customer.id}
                 customer={customer}
-              
+
               />
             ))}
           </tbody>
         </table>
-      ): (
-          <p className='text-center mt-10'>No Customers</p>
+      ) : (
+        <p className='text-center mt-10'>No Customers</p>
       )}
     </>
 

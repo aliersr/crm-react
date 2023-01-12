@@ -6,6 +6,8 @@ import './index.css'
 import Layout from './components/Layout';
 import Index, { Loader as customerLoader } from './pages/Index';
 import NewCustomer, { action as newCustomerAction } from './pages/NewCustomer';
+import ErrorPage from './components/ErrorPage';
+import EditClient from './pages/EditClient';
 
 const router = createBrowserRouter([
   {
@@ -15,16 +17,21 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Index />,
-        loader: customerLoader
+        loader: customerLoader,
+        errorElement: <ErrorPage/>,
       },
       {
         path: '/about-us',
         element: <h1>About-us</h1>
-      },
+      }, 
       {
         path: '/new-customer',
         element: <NewCustomer />,
         action: newCustomerAction
+      },
+      {
+        path: '/customer/:clientId/edit',
+        element: <EditClient />
       }
     ]
   },

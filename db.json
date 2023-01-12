@@ -1,6 +1,5 @@
 {
-
-"customers": [
+  "customers": [
     {
       "id": 1,
       "name": "Mark",
@@ -35,6 +34,14 @@
       "phone": 1398198938,
       "email": "peter@coding.com",
       "company": "Coding Company"
+    },
+    {
+      "name": "Alier Suarez",
+      "company": "DATA",
+      "email": "aliercub@gmail.com",
+      "phone": "8483734350",
+      "notes": "Nuevo Cliente",
+      "id": 6
     }
   ]
 }
