@@ -1,4 +1,5 @@
 const FormNewClient = ({ client }) => {
+    
     return (
         <>
             <div className="mb-4">
@@ -12,6 +13,7 @@ const FormNewClient = ({ client }) => {
                     className="mt-2 block w-full p-3 bg-gray-50"
                     placeholder="Client's Name"
                     name="name"
+                    defaultValue={client?.name}
                 />
             </div>
             <div className="mb-4">
@@ -25,6 +27,7 @@ const FormNewClient = ({ client }) => {
                     className="mt-2 block w-full p-3 bg-gray-50"
                     placeholder="Client's Company"
                     name="company"
+                    defaultValue={client?.company}
                 />
             </div>
 
@@ -39,6 +42,7 @@ const FormNewClient = ({ client }) => {
                     className="mt-2 block w-full p-3 bg-gray-50"
                     placeholder="Client's Email"
                     name="email"
+                    defaultValue={client?.email}
                 />
             </div>
 
@@ -53,6 +57,7 @@ const FormNewClient = ({ client }) => {
                     className="mt-2 block w-full p-3 bg-gray-50"
                     placeholder="Client's Phone"
                     name="phone"
+                    defaultValue={client?.phone}
                 />
             </div>
 
@@ -68,6 +73,7 @@ const FormNewClient = ({ client }) => {
                     className="mt-2 block w-full p-3 bg-gray-50 h-40 align-self"
                     placeholder="Client's Notes"
                     name="notes"
+                    defaultValue={client?.notes}
                 />
             </div>
         </>

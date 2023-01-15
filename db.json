@@ -5,7 +5,8 @@
       "name": "Mark",
       "phone": 102013313,
       "email": "mark@mail.com",
-      "company": "Coding Company"
+      "company": "Coding Company",
+      "notes": "New Note"
     },
     {
       "id": 2,
@@ -50,6 +51,14 @@
       "phone": "7543678284",
       "notes": "New Client",
       "id": 7
+    },
+    {
+      "name": "Briseida soriano",
+      "company": "DATA",
+      "email": "ilotwr@yahoo.com.mx",
+      "phone": "7543678284",
+      "notes": "New Client",
+      "id": 8
     }
   ]
 }

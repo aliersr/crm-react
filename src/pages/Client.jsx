@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 const Client = ({ client }) => {
 
     const navigate = useNavigate();
-    const { name, company, email, phone, id } = client;
+    const { name, company, email, phone, notes, id } = client;
 
     return (
         <tr className="border-b">

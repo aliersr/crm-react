@@ -1,5 +1,5 @@
-
 const URL = import.meta.env.VITE_API_URL;
+const URLone = import.meta.env.VITE_API_URLONE;
 
 //Get Clients
 export async function getClients() {
@@ -18,17 +18,31 @@ export async function getClient(id) {
 }
 
 export async function addNewClient(data) {
-  
   try {
     const respon = await fetch(URL, {
       method: 'POST',
       body: JSON.stringify(data),
       headers: {
-        'Content-type': 'application/json '
-      }
-
+        'Content-Type': 'application/json ',
+      },
     });
   } catch (error) {
-    console.log(error)
+    console.log(error);
+  }
+}
+
+export async function updateClient(id, data) {
+  try {
+    const respon = await fetch(`${URL}/${id}`, {
+      method: 'PUT',
+      body: JSON.stringify(data),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+
+    await respon.json();
+  } catch (error) {
+    console.log(error);
   }
 }

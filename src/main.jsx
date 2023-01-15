@@ -6,8 +6,8 @@ import './index.css'
 import Layout from './components/Layout';
 import Index, { loader as clientLoader } from './pages/Index';
 import NewClient, { action as newClientAction } from './pages/NewClient';
+import EditClient, { loader as editClientLoader, action as editClientAction } from './pages/EditClient';
 import ErrorPage from './components/ErrorPage';
-import EditClient, { loader as editClientLoader } from './pages/EditClient';
 
 const router = createBrowserRouter([
   {
@@ -27,12 +27,15 @@ const router = createBrowserRouter([
       {
         path: '/new-client',
         element: <NewClient />,
-        action: newClientAction
+        action: newClientAction,
+        errorElement: <ErrorPage/>
       },
       {
         path: '/clients/:clientId/edit',
         element: <EditClient />,
-        loader: editClientLoader
+        loader: editClientLoader,
+        action: editClientAction,
+        errorElement: <ErrorPage/>
       }
     ]
   },

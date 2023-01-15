@@ -65,7 +65,7 @@ const NewClient = () => {
           <input
             className='mt-5 w-full bg-blue-800 p-3 uppercase text-white text-lg'
             type="submit"
-            value="Client register"
+            value="Register Client"
           />
         </Form>
 
