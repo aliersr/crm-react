@@ -1,6 +1,6 @@
 import { useNavigate, Form, useLoaderData, useActionData, redirect } from "react-router-dom";
 import { getClient, updateClient } from "../data/clients";
-import FormNewClient from "../components/FormNewClient";
+import FormClient from "../components/FormClient";
 import Error from "../components/Error";
 
 export async function loader({ params }) {
@@ -69,7 +69,7 @@ const EditClient = () => {
                     noValidate
                 >
 
-                    <FormNewClient
+                    <FormClient
                         client={client}
                     />
 

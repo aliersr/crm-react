@@ -1,6 +1,14 @@
 {
   "clients": [
     {
+      "id": 1,
+      "name": "Mark",
+      "phone": 102013313,
+      "email": "mark@mail.com",
+      "company": "Coding Company",
+      "notes": "New Note"
+    },
+    {
       "name": "Karen Update",
       "company": "Coding Company",
       "email": "karen@coding.com",
